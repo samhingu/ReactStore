@@ -19,7 +19,7 @@ function getPlugins() {
         'process.env': {
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         },
-        __DEVELOPMENT__: !isProd,
+        __DEVELOPMENT__: !isProd
     }));
     plugins.push(new HtmlPlugin({
         title: 'React Store',
@@ -32,7 +32,7 @@ function getPlugins() {
     }));
 
     plugins.push(new webpack.ProvidePlugin({
-        'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch',
+        'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
     }));
     if (isProd) {
         // Production ENV
@@ -83,10 +83,16 @@ var config = {
         modulesDirectories: ['node_modules', PATHS.app]
     },
     module: {
+        preLoaders: [
+            {
+                test: /\.js[x]?$/,
+                loaders: ['eslint'],
+                include: PATHS.app
+            }
+        ],
         loaders: getLoaders()
     },
     plugins: getPlugins()
-
 };
 
 if (!isProd) {
