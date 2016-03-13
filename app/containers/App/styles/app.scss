@@ -1,0 +1,9 @@
+/* global styles */
+
+@import 'fonts/opensans';
+
+:global(body) {
+  background-color: gray;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}

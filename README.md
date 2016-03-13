@@ -8,7 +8,9 @@
 7) npm i -D eslint eslint-plugin-react eslint-loader
 8) npm i -D babel-eslint eslint-config-airbnb
 9) npm i -D estraverse-fb (issue of EsLint : https://github.com/eslint/eslint/issues/5476)
-10) 
+10) npm i -S redux react-redux react-router history redux-thunk
+11) npm i -D redux-logger  
+12)  npm i -D redux-devtools 
 
 
 ## Reference Articles
