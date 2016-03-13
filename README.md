@@ -14,6 +14,7 @@
 
 
 ## Reference Articles
+- React-easy-boilerplate
 - [Webpack Environment Configuration](http://jonnyreeves.co.uk/2016/simple-webpack-prod-and-dev-config/)
 - [Redux Easy Boilerplate](https://github.com/anorudes/redux-easy-boilerplate)
 - [Webpack Production Build](http://moduscreate.com/optimizing-react-es6-webpack-production-build/)
@@ -21,3 +22,5 @@
 - [Debugging tools](http://blog.stephencleary.com/2016/03/debugging.html)
 https://github.com/gaearon/redux-devtools-dock-monitor
 https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md
+https://medium.com/lexical-labs-engineering/redux-best-practices-64d59775802e#.nsx5sdj86
+https://github.com/emmenko/redux-react-router-async-example

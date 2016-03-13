@@ -19,7 +19,7 @@ function getPlugins() {
         'process.env': {
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         },
-        __DEVELOPMENT__: !isProd
+        __DEV__: !isProd
     }));
     plugins.push(new HtmlPlugin({
         title: 'React Store',

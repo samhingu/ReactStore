@@ -19,7 +19,7 @@ import Home from 'components/Home'
 import App from 'containers/App'
 import MyList from 'containers/List'
 
-import DevTools from 'containers/DevTools'
+//import DevTools from 'containers/DevTools'
 import { Route } from 'react-router'
 
 ReactDOM.render(
@@ -35,5 +35,7 @@ ReactDOM.render(
                 </Route>
             </Router>
         </Provider>
-        <DevTools store={store} />
+        
     </div>, document.getElementById('root'))
+
+    // <DevTools store={store} />
