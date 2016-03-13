@@ -62,7 +62,7 @@ function getLoaders() {
     });
     loaders.push({
         test: /\.scss?$/,
-        loader: ExtractTextPlugin.extract('style', 'css!sass')
+        loader: ExtractTextPlugin.extract('style', 'css?modules&localIdentName=[path][name]--[local]!sass')
     });
     return loaders;
 }
@@ -95,10 +95,10 @@ var config = {
     plugins: getPlugins()
 };
 
-if (!isProd) {
-    config.cache = true;
-    config.devtool = 'eval';
-    config.watch = true;
-}
+// if (!isProd) {
+//     config.cache = true;
+//     config.devtool = 'eval';
+//     config.watch = true;
+// }
 
 module.exports = config;

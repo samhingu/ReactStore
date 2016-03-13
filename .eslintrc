@@ -77,7 +77,7 @@
         "react/self-closing-comp": 1,
         "react/sort-comp": 1,
         "react/wrap-multilines": 1,
-        "react/forbid-prop-types": 1,
+        "react/forbid-prop-types": 0    ,
         "react/jsx-closing-bracket-location": 1,
         "react/jsx-curly-spacing": 1,
         "react/jsx-indent-props": [

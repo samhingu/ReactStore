@@ -18,3 +18,6 @@
 - [Redux Easy Boilerplate](https://github.com/anorudes/redux-easy-boilerplate)
 - [Webpack Production Build](http://moduscreate.com/optimizing-react-es6-webpack-production-build/)
 - [Linting in webpack](https://survivejs.com/webpack_react/linting_in_webpack/)
+- [Debugging tools](http://blog.stephencleary.com/2016/03/debugging.html)
+https://github.com/gaearon/redux-devtools-dock-monitor
+https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md
