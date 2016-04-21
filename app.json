@@ -1,0 +1,7 @@
+{
+  "name": "React Store",
+  "description": "React Store for storing information",
+  "repository": "https://github.com/sphingu/ReactStore",
+  "logo": "http://reactfordesigners.com/images/react-logo-dark.svg",
+  "keywords": ["react", "store", "reactstore"]
+}
