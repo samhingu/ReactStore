@@ -55,6 +55,9 @@ function getPlugins() {
 function getLoaders() {
     var loaders = [];
 
+   loaders.push(        {test: /\.(png|jpg)$/, loader: 'file-loader'}    );
+            
+    loaders.push({test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/, loader: 'file-loader'});
     loaders.push({
         test: /\.js[x]?$/,
         loader: 'babel',
@@ -62,7 +65,11 @@ function getLoaders() {
     });
     loaders.push({
         test: /\.scss?$/,
-        loader: ExtractTextPlugin.extract('style', 'css?modules&localIdentName=[path][name]--[local]!sass')
+        loader: ExtractTextPlugin.extract('style', 'css?localIdentName=[path][name]--[local]!sass')
+    });
+    loaders.push({
+         test: /\.less$/,
+        loader: ExtractTextPlugin.extract('style', 'css?modules&localIdentName=[path][name]--[local]!less')
     });
     return loaders;
 }
@@ -73,14 +80,13 @@ var config = {
         app: 'index.jsx',
         vendor: ['react', 'react-dom']
     },
-    output: {
-        path: PATHS.build,
+    output: {        path: PATHS.build,
         filename: '[name].[hash].js'
         //publicPath: 'cdn path where our bundled files are going to be host'
     },
     resolve: {
-        extensions: ['', '.js', '.jsx', '.scss'],
-        modulesDirectories: ['node_modules', PATHS.app]
+        extensions: ['', '.js', '.jsx', '.scss','.less','.css'],
+        modulesDirectories: ['../node_modules', PATHS.app, '../semantic']
     },
     module: {
         preLoaders: [

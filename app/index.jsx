@@ -19,8 +19,15 @@ import Home from 'components/Home'
 import App from 'containers/App'
 import MyList from 'containers/List'
 
-//import DevTools from 'containers/DevTools'
+import DevTools from 'containers/DevTools'
 import { Route } from 'react-router'
+
+function checkAuth() {
+    ///nextState, replaceState
+    // if (nextState.location.pathname !== '/') {
+    //     replaceState(null, '/')
+    // }
+}
 
 ReactDOM.render(
     <div>
@@ -28,14 +35,14 @@ ReactDOM.render(
             <Router history={history1}>
                 <Route path="/" component={App}>
                     <IndexRoute component={Home}/>
-                    <Route path="foo" component={Foo}/>
-                    <Route path="bar" component={Bar}/>
+                    <Route path="foo" component={Foo} onEnter={checkAuth}/>
+                    <Route path="bar" component={Bar} />
                     <Route path="home" component={Home}/>
-                    <Route path="list" component={MyList}/>
+                    <Route path="list" component={MyList} onEnter={checkAuth}/>
                 </Route>
             </Router>
         </Provider>
-        
+    <DevTools store={store} />
+       
     </div>, document.getElementById('root'))
-
-    // <DevTools store={store} />
+    
